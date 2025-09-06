@@ -11,7 +11,7 @@ Each folder (`i1` → `i8`) represents a different project showcasing unique UI/
 
 ## 📂 Project Structure
 
-i1/ → Basic web project with README
+i1/ → Basic web project
 i2/ → Web template (HTML, CSS, JS)
 i3/ → Web template (HTML, CSS, JS)
 i4/ → Single-page project (index, script, styles)
