@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savory Delights | Fine Dining Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.svg" alt="Savory Delights Logo">
+                <div class="logo-text">
+                    <h1>Savory Delights</h1>
+                    <p>Fine Dining Experience</p>
+                </div>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#reservation">Reservation</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" style="background-image: url('images/hero-bg.svg')">
+        <div class="hero-content">
+            <h1>Experience Culinary Excellence</h1>
+            <p>Indulge in a symphony of flavors crafted with passion and precision</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#reservation" class="btn btn-secondary">Book a Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Story</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/restaurant-interior.jpg" alt="Restaurant Interior">
+                </div>
+                <div class="about-text">
+                    <h3>A Tradition of Excellence</h3>
+                    <p>Founded in 2005, Savory Delights has been serving exceptional cuisine in a warm and elegant atmosphere. Our award-winning chefs combine traditional techniques with innovative approaches to create unforgettable dining experiences.</p>
+                    <p>We source only the finest ingredients from local farmers and suppliers, ensuring freshness and supporting our community. Every dish tells a story of passion, creativity, and respect for culinary traditions.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-utensils"></i>
+                            <h4>Gourmet Cuisine</h4>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-wine-glass-alt"></i>
+                            <h4>Fine Wines</h4>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-concierge-bell"></i>
+                            <h4>Exceptional Service</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Menu</h2>
+                <div class="divider"></div>
+                <p>Explore our carefully crafted selections</p>
+            </div>
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="starters">Starters</button>
+                <button class="filter-btn" data-filter="mains">Main Courses</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+                <button class="filter-btn" data-filter="drinks">Drinks</button>
+            </div>
+            <div class="menu-items">
+                <!-- Starters -->
+                <div class="menu-item" data-category="starters">
+                    <div class="menu-item-image">
+                        <img src="images/menu/salad.svg" alt="Bruschetta">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Bruschetta <span class="price">$12</span></h3>
+                        <p>Grilled bread rubbed with garlic and topped with olive oil, salt, tomato, and herbs.</p>
+                        <div class="tags">
+                            <span class="tag vegetarian">Vegetarian</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="starters">
+                    <div class="menu-item-image">
+                        <img src="images/menu/calamari.jpg" alt="Calamari">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Crispy Calamari <span class="price">$16</span></h3>
+                        <p>Lightly battered and fried calamari served with lemon aioli and marinara sauce.</p>
+                    </div>
+                </div>
+                
+                <!-- Main Courses -->
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-image">
+                        <img src="images/menu/steak.svg" alt="Filet Mignon">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Filet Mignon <span class="price">$38</span></h3>
+                        <p>8oz prime beef tenderloin, truffle mashed potatoes, seasonal vegetables, red wine reduction.</p>
+                        <div class="tags">
+                            <span class="tag signature">Chef's Signature</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-image">
+                        <img src="images/menu/salmon.jpg" alt="Grilled Salmon">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Grilled Salmon <span class="price">$32</span></h3>
+                        <p>Atlantic salmon, lemon herb risotto, asparagus, beurre blanc sauce.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-image">
+                        <img src="images/menu/pasta.svg" alt="Mushroom Risotto">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Wild Mushroom Risotto <span class="price">$26</span></h3>
+                        <p>Arborio rice, assorted wild mushrooms, white wine, parmesan, truffle oil.</p>
+                        <div class="tags">
+                            <span class="tag vegetarian">Vegetarian</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desserts -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-image">
+                        <img src="images/menu/dessert.svg" alt="Tiramisu">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Classic Tiramisu <span class="price">$12</span></h3>
+                        <p>Espresso-soaked ladyfingers, mascarpone cream, cocoa powder.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-image">
+                        <img src="images/menu/chocolate-lava.jpg" alt="Chocolate Lava Cake">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Chocolate Lava Cake <span class="price">$14</span></h3>
+                        <p>Warm chocolate cake, molten center, vanilla ice cream, fresh berries.</p>
+                        <div class="tags">
+                            <span class="tag signature">Chef's Signature</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Drinks -->
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="images/menu/wine.jpg" alt="Wine Selection">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Wine Selection <span class="price">$12-$200</span></h3>
+                        <p>Extensive collection of domestic and imported wines. Ask your server for recommendations.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="images/menu/cocktail.jpg" alt="Signature Cocktails">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Signature Cocktails <span class="price">$16</span></h3>
+                        <p>Handcrafted cocktails made with premium spirits and fresh ingredients.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-footer">
+                <p>* Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness.</p>
+                <p>Please inform your server of any food allergies or dietary restrictions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation">
+        <div class="container">
+            <div class="section-header">
+                <h2>Reserve a Table</h2>
+                <div class="divider"></div>
+                <p>Make your dining experience memorable</p>
+            </div>
+            <div class="reservation-content">
+                <div class="reservation-info">
+                    <h3>Dining Hours</h3>
+                    <ul class="hours-list">
+                        <li><span>Monday - Thursday:</span> 5:00 PM - 10:00 PM</li>
+                        <li><span>Friday - Saturday:</span> 5:00 PM - 11:00 PM</li>
+                        <li><span>Sunday:</span> 4:00 PM - 9:00 PM</li>
+                    </ul>
+                    <div class="reservation-contact">
+                        <p>For parties of 8 or more, please call us directly:</p>
+                        <a href="tel:+15551234567" class="phone"><i class="fas fa-phone"></i> (555) 123-4567</a>
+                    </div>
+                </div>
+                <div class="reservation-form-container">
+                    <form id="reservation-form" class="reservation-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Date</label>
+                                <input type="date" id="date" name="date" required>
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Time</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Select Time</option>
+                                    <option value="17:00">5:00 PM</option>
+                                    <option value="17:30">5:30 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                    <option value="18:30">6:30 PM</option>
+                                    <option value="19:00">7:00 PM</option>
+                                    <option value="19:30">7:30 PM</option>
+                                    <option value="20:00">8:00 PM</option>
+                                    <option value="20:30">8:30 PM</option>
+                                    <option value="21:00">9:00 PM</option>
+                                </select>
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <select id="guests" name="guests" required>
+                                <option value="">Select Number</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5 People</option>
+                                <option value="6">6 People</option>
+                                <option value="7">7 People</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="special-requests">Special Requests (Optional)</label>
+                            <textarea id="special-requests" name="special-requests" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">Reserve Now</button>
+                        </div>
+                    </form>
+                    <div id="reservation-confirmation" class="reservation-confirmation">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Reservation Received!</h3>
+                        <p>Thank you for your reservation request. We'll send a confirmation to your email shortly.</p>
+                        <button id="new-reservation" class="btn btn-secondary">Make Another Reservation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section-header">
+                <h2>Upcoming Events</h2>
+                <div class="divider"></div>
+                <p>Join us for special culinary experiences</p>
+            </div>
+            <div class="events-calendar">
+                <div class="calendar-header">
+                    <button id="prev-month" class="calendar-nav"><i class="fas fa-chevron-left"></i></button>
+                    <h3 id="current-month">September 2023</h3>
+                    <button id="next-month" class="calendar-nav"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div id="calendar-grid" class="calendar-grid">
+                    <!-- Calendar will be generated by JavaScript -->
+                </div>
+            </div>
+            <div id="events-list" class="events-list">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">SEP</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Wine Tasting Evening</h3>
+                        <p class="event-time"><i class="far fa-clock"></i> 7:00 PM - 9:00 PM</p>
+                        <p>Join our sommelier for an exclusive tasting of premium wines paired with gourmet appetizers.</p>
+                        <a href="#" class="btn btn-small">Learn More</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">22</span>
+                        <span class="month">SEP</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Chef's Table Experience</h3>
+                        <p class="event-time"><i class="far fa-clock"></i> 6:30 PM - 10:00 PM</p>
+                        <p>An intimate dining experience featuring a special tasting menu prepared and presented by our executive chef.</p>
+                        <a href="#" class="btn btn-small">Learn More</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">29</span>
+                        <span class="month">SEP</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Live Jazz Night</h3>
+                        <p class="event-time"><i class="far fa-clock"></i> 8:00 PM - 11:00 PM</p>
+                        <p>Enjoy the smooth sounds of live jazz while savoring our special evening menu and craft cocktails.</p>
+                        <a href="#" class="btn btn-small">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Guests Say</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"An extraordinary dining experience! The attention to detail in every dish and the impeccable service made our anniversary dinner truly special."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="images/testimonials/person1.svg" alt="Sarah Johnson">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"The chef's tasting menu was a culinary journey I won't soon forget. Each course was more impressive than the last, and the wine pairings were perfect."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="images/testimonials/person2.svg" alt="Michael Chen">
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"From the moment we walked in, we felt welcomed. The ambiance is elegant yet comfortable, and the food is consistently excellent. This has become our favorite special occasion restaurant."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="images/testimonials/person3.svg" alt="Emily & David Rodriguez">
+                        </div>
+                        <div class="author-info">
+                            <h4>Emily & David Rodriguez</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button id="prev-testimonial" class="testimonial-nav"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button id="next-testimonial" class="testimonial-nav"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <div class="divider"></div>
+                <p>We'd love to hear from you</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>123 Gourmet Avenue<br>Culinary District<br>New York, NY 10001</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Hours</h3>
+                            <p>Monday - Thursday: 5:00 PM - 10:00 PM<br>
+                            Friday - Saturday: 5:00 PM - 11:00 PM<br>
+                            Sunday: 4:00 PM - 9:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@savorydelights.com">info@savorydelights.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343077!2d-74.00425882426903!3d40.74076937138443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzI2LjgiTiA3NMKwMDAnMDkuMCJX!5e0!3m2!1sen!2sus!4v1631234567890!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Savory Delights</h2>
+                    <p>Fine Dining Experience</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#reservation">Reservation</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Stay updated with our latest events and special offers</p>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Savory Delights. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <i class="notification-icon"></i>
+            <p class="notification-message"></p>
+        </div>
+        <button class="notification-close"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

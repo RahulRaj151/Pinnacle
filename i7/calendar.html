@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar | EventHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">EventHub</a>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="user-info">
+                    <span class="user-name">John Doe</span>
+                    <img src="https://via.placeholder.com/40" alt="User" class="user-avatar">
+                </div>
+                <div class="user-dropdown">
+                    <ul>
+                        <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                        <li><a href="create-event.html"><i class="fas fa-plus-circle"></i> Create Event</a></li>
+                        <li><a href="my-events.html"><i class="fas fa-calendar-check"></i> My Events</a></li>
+                        <li><a href="calendar.html" class="active"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                        <li><a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
+                        <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Calendar Section -->
+    <section class="calendar-section">
+        <div class="container">
+            <div class="page-header">
+                <h1>Event Calendar</h1>
+                <div class="calendar-actions">
+                    <div class="calendar-view-options">
+                        <button class="btn btn-small active" data-view="month">Month</button>
+                        <button class="btn btn-small" data-view="week">Week</button>
+                        <button class="btn btn-small" data-view="day">Day</button>
+                        <button class="btn btn-small" data-view="list">List</button>
+                    </div>
+                    <a href="create-event.html" class="btn btn-primary"><i class="fas fa-plus"></i> Create Event</a>
+                </div>
+            </div>
+
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <div class="calendar-navigation">
+                        <button class="btn-icon" id="prev-month"><i class="fas fa-chevron-left"></i></button>
+                        <h2 id="current-month">June 2023</h2>
+                        <button class="btn-icon" id="next-month"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <button class="btn btn-small" id="today-btn">Today</button>
+                </div>
+
+                <div class="calendar-filters">
+                    <div class="filter-group">
+                        <label>Filter by:</label>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="filter-my-events" checked>
+                                <label for="filter-my-events">My Events</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="filter-attending" checked>
+                                <label for="filter-attending">Attending</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="filter-public" checked>
+                                <label for="filter-public">Public Events</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Categories:</label>
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="business">Business & Professional</option>
+                            <option value="technology">Science & Technology</option>
+                            <option value="community">Community & Culture</option>
+                            <option value="arts">Arts & Entertainment</option>
+                            <option value="health">Health & Wellness</option>
+                            <option value="education">Education</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Month View (Default) -->
+                <div class="calendar-view month-view active" id="month-view">
+                    <div class="calendar-weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="calendar-grid" id="calendar-grid">
+                        <!-- Calendar days will be generated by JavaScript -->
+                        <!-- Example structure for a day with events -->
+                        <div class="calendar-day">
+                            <div class="day-header">
+                                <span class="day-number">1</span>
+                            </div>
+                            <div class="day-events">
+                                <div class="calendar-event technology" data-event-id="1">
+                                    <span class="event-time">10:00 AM</span>
+                                    <span class="event-title">Tech Conference</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- More days would be here -->
+                    </div>
+                </div>
+
+                <!-- Week View -->
+                <div class="calendar-view week-view" id="week-view">
+                    <div class="week-header">
+                        <div class="time-column"></div>
+                        <div class="week-days">
+                            <div class="week-day">
+                                <div class="day-name">Sun</div>
+                                <div class="day-number">28</div>
+                            </div>
+                            <div class="week-day">
+                                <div class="day-name">Mon</div>
+                                <div class="day-number">29</div>
+                            </div>
+                            <div class="week-day">
+                                <div class="day-name">Tue</div>
+                                <div class="day-number">30</div>
+                            </div>
+                            <div class="week-day">
+                                <div class="day-name">Wed</div>
+                                <div class="day-number">31</div>
+                            </div>
+                            <div class="week-day">
+                                <div class="day-name">Thu</div>
+                                <div class="day-number">1</div>
+                            </div>
+                            <div class="week-day">
+                                <div class="day-name">Fri</div>
+                                <div class="day-number">2</div>
+                            </div>
+                            <div class="week-day">
+                                <div class="day-name">Sat</div>
+                                <div class="day-number">3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-body">
+                        <div class="time-slots">
+                            <div class="time-slot">8:00 AM</div>
+                            <div class="time-slot">9:00 AM</div>
+                            <div class="time-slot">10:00 AM</div>
+                            <div class="time-slot">11:00 AM</div>
+                            <div class="time-slot">12:00 PM</div>
+                            <div class="time-slot">1:00 PM</div>
+                            <div class="time-slot">2:00 PM</div>
+                            <div class="time-slot">3:00 PM</div>
+                            <div class="time-slot">4:00 PM</div>
+                            <div class="time-slot">5:00 PM</div>
+                            <div class="time-slot">6:00 PM</div>
+                            <div class="time-slot">7:00 PM</div>
+                            <div class="time-slot">8:00 PM</div>
+                        </div>
+                        <div class="week-grid">
+                            <!-- Week events will be generated by JavaScript -->
+                            <!-- Example structure for a week event -->
+                            <div class="week-event technology" style="grid-column: 4; grid-row: 3 / span 2;" data-event-id="1">
+                                <div class="event-content">
+                                    <span class="event-time">10:00 AM - 12:00 PM</span>
+                                    <span class="event-title">Tech Conference</span>
+                                </div>
+                            </div>
+                            <!-- More events would be here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day View -->
+                <div class="calendar-view day-view" id="day-view">
+                    <div class="day-header">
+                        <h3 id="current-day">Thursday, June 1, 2023</h3>
+                    </div>
+                    <div class="day-body">
+                        <div class="time-slots">
+                            <div class="time-slot">8:00 AM</div>
+                            <div class="time-slot">9:00 AM</div>
+                            <div class="time-slot">10:00 AM</div>
+                            <div class="time-slot">11:00 AM</div>
+                            <div class="time-slot">12:00 PM</div>
+                            <div class="time-slot">1:00 PM</div>
+                            <div class="time-slot">2:00 PM</div>
+                            <div class="time-slot">3:00 PM</div>
+                            <div class="time-slot">4:00 PM</div>
+                            <div class="time-slot">5:00 PM</div>
+                            <div class="time-slot">6:00 PM</div>
+                            <div class="time-slot">7:00 PM</div>
+                            <div class="time-slot">8:00 PM</div>
+                        </div>
+                        <div class="day-events">
+                            <!-- Day events will be generated by JavaScript -->
+                            <!-- Example structure for a day event -->
+                            <div class="day-event technology" style="top: 10%; height: 10%;" data-event-id="1">
+                                <div class="event-content">
+                                    <span class="event-time">10:00 AM - 12:00 PM</span>
+                                    <span class="event-title">Tech Conference</span>
+                                    <span class="event-location"><i class="fas fa-map-marker-alt"></i> Convention Center</span>
+                                </div>
+                            </div>
+                            <!-- More events would be here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- List View -->
+                <div class="calendar-view list-view" id="list-view">
+                    <div class="list-header">
+                        <h3>Upcoming Events</h3>
+                    </div>
+                    <div class="list-body">
+                        <div class="event-list">
+                            <!-- List events will be generated by JavaScript -->
+                            <!-- Example structure for list events -->
+                            <div class="list-event" data-event-id="1">
+                                <div class="event-date">
+                                    <span class="event-day">1</span>
+                                    <span class="event-month">Jun</span>
+                                </div>
+                                <div class="event-details">
+                                    <h4 class="event-title">Tech Conference 2023</h4>
+                                    <p class="event-time"><i class="far fa-clock"></i> 10:00 AM - 12:00 PM</p>
+                                    <p class="event-location"><i class="fas fa-map-marker-alt"></i> Convention Center, New York</p>
+                                    <div class="event-category">
+                                        <span class="category-tag technology">Technology</span>
+                                    </div>
+                                </div>
+                                <div class="event-actions">
+                                    <a href="#" class="btn btn-small">View</a>
+                                </div>
+                            </div>
+                            <div class="list-event" data-event-id="2">
+                                <div class="event-date">
+                                    <span class="event-day">5</span>
+                                    <span class="event-month">Jun</span>
+                                </div>
+                                <div class="event-details">
+                                    <h4 class="event-title">Marketing Workshop</h4>
+                                    <p class="event-time"><i class="far fa-clock"></i> 2:00 PM - 4:00 PM</p>
+                                    <p class="event-location"><i class="fas fa-map-marker-alt"></i> Business Center, Chicago</p>
+                                    <div class="event-category">
+                                        <span class="category-tag business">Business</span>
+                                    </div>
+                                </div>
+                                <div class="event-actions">
+                                    <a href="#" class="btn btn-small">View</a>
+                                </div>
+                            </div>
+                            <div class="list-event" data-event-id="3">
+                                <div class="event-date">
+                                    <span class="event-day">10</span>
+                                    <span class="event-month">Jun</span>
+                                </div>
+                                <div class="event-details">
+                                    <h4 class="event-title">Charity Gala</h4>
+                                    <p class="event-time"><i class="far fa-clock"></i> 7:00 PM - 10:00 PM</p>
+                                    <p class="event-location"><i class="fas fa-map-marker-alt"></i> Grand Hotel, San Francisco</p>
+                                    <div class="event-category">
+                                        <span class="category-tag community">Community</span>
+                                    </div>
+                                </div>
+                                <div class="event-actions">
+                                    <a href="#" class="btn btn-small">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Modal -->
+    <div class="modal" id="event-details-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Tech Conference 2023</h3>
+                <button class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="event-details-content">
+                    <div class="event-details-main">
+                        <div class="event-details-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Event Image">
+                        </div>
+                        <div class="event-details-info">
+                            <div class="event-detail">
+                                <i class="far fa-calendar-alt"></i>
+                                <div>
+                                    <h4>Date & Time</h4>
+                                    <p>Thursday, June 1, 2023</p>
+                                    <p>10:00 AM - 12:00 PM</p>
+                                </div>
+                            </div>
+                            <div class="event-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Convention Center</p>
+                                    <p>123 Main St, New York, NY 10001</p>
+                                </div>
+                            </div>
+                            <div class="event-detail">
+                                <i class="fas fa-user"></i>
+                                <div>
+                                    <h4>Organizer</h4>
+                                    <p>Tech Events Inc.</p>
+                                </div>
+                            </div>
+                            <div class="event-detail">
+                                <i class="fas fa-ticket-alt"></i>
+                                <div>
+                                    <h4>Ticket</h4>
+                                    <p>$49.99 - General Admission</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-details-description">
+                        <h4>About This Event</h4>
+                        <p>Join us for the annual Tech Conference 2023, where industry leaders and innovators gather to share insights on the latest technological advancements. This year's conference will focus on artificial intelligence, blockchain, and cybersecurity.</p>
+                        <p>The event will feature keynote speeches, panel discussions, and networking opportunities. Don't miss this chance to connect with professionals in the tech industry and stay updated on emerging trends.</p>
+                        <h4>What You'll Learn</h4>
+                        <ul>
+                            <li>Latest developments in AI and machine learning</li>
+                            <li>Blockchain applications in various industries</li>
+                            <li>Cybersecurity best practices for businesses</li>
+                            <li>Future trends in technology</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline">Add to Calendar</button>
+                <a href="#" class="btn btn-primary">Register Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>EventHub</h2>
+                    <p>Your all-in-one event management platform</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Guides</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">GDPR</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 EventHub. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="calendar.js"></script>
+</body>
+</html>

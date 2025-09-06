@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobalNews - Your Trusted Source for World News</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Breaking News Ticker -->
+    <div class="breaking-news">
+        <div class="breaking-content">
+            <span class="breaking-label">BREAKING:</span>
+            <div class="breaking-text">
+                <span>Global Climate Summit reaches historic agreement • Tech stocks surge amid AI breakthrough • World Cup qualifier results</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <i class="fas fa-globe"></i>
+                    <h1>GlobalNews</h1>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <button class="nav-btn active" data-category="All">All</button>
+                    <button class="nav-btn" data-category="World">World</button>
+                    <button class="nav-btn" data-category="Technology">Technology</button>
+                    <button class="nav-btn" data-category="Business">Business</button>
+                    <button class="nav-btn" data-category="Sports">Sports</button>
+                    <button class="nav-btn" data-category="Health">Health</button>
+                    <button class="nav-btn" data-category="Entertainment">Entertainment</button>
+                </nav>
+
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <form class="search-form">
+                        <input type="text" class="search-input" placeholder="Search news..." id="searchInput">
+                        <i class="fas fa-search search-icon"></i>
+                    </form>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-search">
+                    <form class="search-form">
+                        <input type="text" class="search-input" placeholder="Search news..." id="mobileSearchInput">
+                        <i class="fas fa-search search-icon"></i>
+                    </form>
+                </div>
+                <div class="mobile-nav">
+                    <button class="mobile-nav-btn active" data-category="All">All</button>
+                    <button class="mobile-nav-btn" data-category="World">World</button>
+                    <button class="mobile-nav-btn" data-category="Technology">Technology</button>
+                    <button class="mobile-nav-btn" data-category="Business">Business</button>
+                    <button class="mobile-nav-btn" data-category="Sports">Sports</button>
+                    <button class="mobile-nav-btn" data-category="Health">Health</button>
+                    <button class="mobile-nav-btn" data-category="Entertainment">Entertainment</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Stay Informed with Global News</h1>
+                    <p class="hero-subtitle">Discover the latest stories from around the world, curated from trusted sources and delivered with clarity and context.</p>
+                </div>
+                
+                <div class="hero-grid">
+                    <div class="featured-article" id="featuredArticle">
+                        <!-- Featured article will be inserted here -->
+                    </div>
+                    
+                    <div class="sidebar-articles">
+                        <h3 class="sidebar-title">Latest Headlines</h3>
+                        <div id="sidebarArticles">
+                            <!-- Sidebar articles will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trending Section -->
+            <section class="trending-section">
+                <div class="trending-header">
+                    <i class="fas fa-fire trending-icon"></i>
+                    <h2 class="trending-title">Trending Now</h2>
+                    <i class="fas fa-trending-up trending-up"></i>
+                </div>
+                <div class="trending-grid" id="trendingGrid">
+                    <!-- Trending articles will be inserted here -->
+                </div>
+            </section>
+
+            <!-- Category Filter -->
+            <section class="category-filter">
+                <div class="category-buttons" id="categoryButtons">
+                    <!-- Category buttons will be inserted here -->
+                </div>
+            </section>
+
+            <!-- Search Results Info -->
+            <div class="search-results-info" id="searchResultsInfo" style="display: none;">
+                <h2 class="search-results-title" id="searchResultsTitle"></h2>
+                <p class="search-results-count" id="searchResultsCount"></p>
+            </div>
+
+            <!-- Articles Grid -->
+            <section class="articles-section">
+                <div class="articles-grid" id="articlesGrid">
+                    <!-- Articles will be inserted here -->
+                </div>
+                <div class="no-articles" id="noArticles" style="display: none;">
+                    <h3>No articles found</h3>
+                    <p id="noArticlesMessage"></p>
+                </div>
+            </section>
+
+            <!-- Load More Button -->
+            <div class="load-more-container" id="loadMoreContainer">
+                <button class="load-more-btn" id="loadMoreBtn">Load More Articles</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-globe"></i>
+                        <h3>GlobalNews</h3>
+                    </div>
+                    <p class="footer-description">
+                        Your trusted source for global news, delivering accurate and timely information from around the world.
+                    </p>
+                    <div class="social-links">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="footer-section">
+                    <h4 class="footer-title">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">World News</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Health</a></li>
+                        <li><a href="#">Entertainment</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@globalnews.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>New York, NY</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 GlobalNews. All rights reserved. | Powered by global news sources</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

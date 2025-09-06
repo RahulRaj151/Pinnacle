@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub - Plan, Promote & Manage Events</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Event<span>Hub</span></h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#create">Create Event</a></li>
+                    <li><a href="#calendar">Calendar</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-login">Login</button>
+                <button class="btn btn-primary">Sign Up</button>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Create Memorable Events with Ease</h1>
+                <p>Plan, promote, and manage your events all in one place. From small gatherings to large conferences, EventHub has you covered.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Create Event</button>
+                    <button class="btn btn-secondary">Explore Events</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-image.svg" alt="Event Planning Illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stat-item">
+                <h2>10,000+</h2>
+                <p>Events Created</p>
+            </div>
+            <div class="stat-item">
+                <h2>50,000+</h2>
+                <p>Active Users</p>
+            </div>
+            <div class="stat-item">
+                <h2>98%</h2>
+                <p>Satisfaction Rate</p>
+            </div>
+            <div class="stat-item">
+                <h2>24/7</h2>
+                <p>Customer Support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Features for Event Organizers</h2>
+                <p>Everything you need to create successful events from start to finish</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-plus"></i>
+                    </div>
+                    <h3>Easy Event Creation</h3>
+                    <p>Create and customize your events in minutes with our intuitive event builder</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>Ticket Management</h3>
+                    <p>Sell tickets, track sales, and manage attendees all in one place</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Promotion Tools</h3>
+                    <p>Easily share your events on social media and via email campaigns</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Attendee Management</h3>
+                    <p>Track RSVPs, send reminders, and communicate with your guests</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Get insights into your event performance with detailed analytics</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Manage your events on the go with our responsive mobile design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Create Event Section -->
+    <section id="create" class="create-event">
+        <div class="container">
+            <div class="section-header">
+                <h2>Create Your Event in Minutes</h2>
+                <p>Follow these simple steps to get your event up and running</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Sign Up for an Account</h3>
+                    <p>Create your free EventHub account to get started</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Fill in Event Details</h3>
+                    <p>Add your event information, date, time, and location</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Customize & Publish</h3>
+                    <p>Add images, set ticket prices, and publish your event</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Promote & Manage</h3>
+                    <p>Share your event and track registrations in real-time</p>
+                </div>
+            </div>
+            <div class="cta-container">
+                <button class="btn btn-primary">Create Your First Event</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Form Preview -->
+    <section class="event-form-preview">
+        <div class="container">
+            <div class="form-container">
+                <h3>Event Details</h3>
+                <form id="event-form" class="event-form">
+                    <div class="form-group">
+                        <label for="event-name">Event Name</label>
+                        <input type="text" id="event-name" placeholder="Enter event name">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="event-date">Date</label>
+                            <input type="date" id="event-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="event-time">Time</label>
+                            <input type="time" id="event-time">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-location">Location</label>
+                        <input type="text" id="event-location" placeholder="Enter location">
+                    </div>
+                    <div class="form-group">
+                        <label for="event-description">Description</label>
+                        <textarea id="event-description" placeholder="Describe your event"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-category">Category</label>
+                        <select id="event-category">
+                            <option value="">Select a category</option>
+                            <option value="conference">Conference</option>
+                            <option value="workshop">Workshop</option>
+                            <option value="seminar">Seminar</option>
+                            <option value="networking">Networking</option>
+                            <option value="party">Party</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Ticket Options</label>
+                        <div class="ticket-option">
+                            <input type="text" placeholder="Ticket name (e.g. General Admission)">
+                            <input type="number" placeholder="Price">
+                            <input type="number" placeholder="Quantity">
+                        </div>
+                        <button type="button" class="btn btn-small">+ Add Ticket Type</button>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Event</button>
+                </form>
+            </div>
+            <div class="form-preview">
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="images/event-placeholder.svg" alt="Event Preview">
+                    </div>
+                    <div class="event-details">
+                        <span class="event-date">Jun 15, 2023 • 6:00 PM</span>
+                        <h3 class="event-title">Tech Conference 2023</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Convention Center, New York</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-ticket-alt"></i> From $99</span>
+                            <span><i class="fas fa-user-friends"></i> 250 attendees</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="preview-label">Live Preview</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section id="calendar" class="calendar-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Discover Upcoming Events</h2>
+                <p>Browse and filter events by date, category, or location</p>
+            </div>
+            <div class="calendar-controls">
+                <div class="calendar-nav">
+                    <button id="prev-month" class="btn btn-icon"><i class="fas fa-chevron-left"></i></button>
+                    <h3 id="current-month">June 2023</h3>
+                    <button id="next-month" class="btn btn-icon"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="view-options">
+                    <button class="btn btn-small active">Month</button>
+                    <button class="btn btn-small">Week</button>
+                    <button class="btn btn-small">List</button>
+                </div>
+            </div>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="calendar-grid" id="calendar-grid">
+                    <!-- Calendar days will be generated by JavaScript -->
+                </div>
+            </div>
+            <div class="event-list">
+                <h3>Upcoming Events</h3>
+                <div class="event-items">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">Jun</span>
+                        </div>
+                        <div class="event-info">
+                            <h4>Tech Conference 2023</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Convention Center, New York</p>
+                            <p><i class="fas fa-clock"></i> 9:00 AM - 5:00 PM</p>
+                        </div>
+                        <button class="btn btn-small">Details</button>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">22</span>
+                            <span class="month">Jun</span>
+                        </div>
+                        <div class="event-info">
+                            <h4>Marketing Workshop</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Business Center, Chicago</p>
+                            <p><i class="fas fa-clock"></i> 1:00 PM - 4:00 PM</p>
+                        </div>
+                        <button class="btn btn-small">Details</button>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">30</span>
+                            <span class="month">Jun</span>
+                        </div>
+                        <div class="event-info">
+                            <h4>Networking Mixer</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Skyline Lounge, San Francisco</p>
+                            <p><i class="fas fa-clock"></i> 6:00 PM - 9:00 PM</p>
+                        </div>
+                        <button class="btn btn-small">Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Users Say</h2>
+                <p>Join thousands of satisfied event organizers</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <p>"EventHub made organizing our annual conference so much easier. The ticket management and attendee tracking features saved us countless hours of work."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonials/person1.svg" alt="Sarah Johnson">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Conference Director, TechCorp</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <p>"As a small business owner, I needed an affordable way to promote my workshops. EventHub not only helped me create professional event pages but also increased my attendance by 40%."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonials/person2.svg" alt="Michael Chen">
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Owner, Growth Workshops</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <p>"The analytics dashboard gives me valuable insights into my event performance. I can now make data-driven decisions that have improved our event ROI significantly."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonials/person3.svg" alt="Jessica Rivera">
+                        <div class="author-info">
+                            <h4>Jessica Rivera</h4>
+                            <p>Marketing Manager, EventPro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="testimonial-prev"><i class="fas fa-arrow-left"></i></button>
+                <div class="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="testimonial-next"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that works best for your events</p>
+            </div>
+            <div class="pricing-plans">
+                <div class="pricing-plan">
+                    <div class="plan-header">
+                        <h3>Free</h3>
+                        <div class="plan-price">
+                            <span class="price">$0</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>Perfect for occasional events</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Up to 3 events</li>
+                        <li><i class="fas fa-check"></i> Basic event customization</li>
+                        <li><i class="fas fa-check"></i> Email notifications</li>
+                        <li><i class="fas fa-check"></i> Attendee management</li>
+                        <li><i class="fas fa-times"></i> Custom branding</li>
+                        <li><i class="fas fa-times"></i> Advanced analytics</li>
+                    </ul>
+                    <button class="btn btn-outline">Get Started</button>
+                </div>
+                <div class="pricing-plan featured">
+                    <div class="plan-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Pro</h3>
+                        <div class="plan-price">
+                            <span class="price">$29</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>For growing event organizers</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Unlimited events</li>
+                        <li><i class="fas fa-check"></i> Advanced customization</li>
+                        <li><i class="fas fa-check"></i> Email & SMS notifications</li>
+                        <li><i class="fas fa-check"></i> Attendee management</li>
+                        <li><i class="fas fa-check"></i> Custom branding</li>
+                        <li><i class="fas fa-check"></i> Basic analytics</li>
+                    </ul>
+                    <button class="btn btn-primary">Get Started</button>
+                </div>
+                <div class="pricing-plan">
+                    <div class="plan-header">
+                        <h3>Business</h3>
+                        <div class="plan-price">
+                            <span class="price">$79</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>For professional event management</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Unlimited events</li>
+                        <li><i class="fas fa-check"></i> Premium customization</li>
+                        <li><i class="fas fa-check"></i> All notification channels</li>
+                        <li><i class="fas fa-check"></i> VIP attendee management</li>
+                        <li><i class="fas fa-check"></i> Custom branding & domain</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics & reports</li>
+                    </ul>
+                    <button class="btn btn-outline">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Create Your Next Successful Event?</h2>
+                <p>Join thousands of event organizers who trust EventHub to bring their vision to life</p>
+                <button class="btn btn-primary">Sign Up for Free</button>
+                <p class="cta-small">No credit card required. Free plan available.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Have questions? We're here to help</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>support@eventhub.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Visit Us</h3>
+                            <p>123 Event Street, Suite 100<br>San Francisco, CA 94107</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Event<span>Hub</span></h2>
+                    <p>Plan, promote, and manage events with ease</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Product</h3>
+                        <ul>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Developers</a></li>
+                            <li><a href="#">API</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">GDPR</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 EventHub. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Login to Your Account</h2>
+            </div>
+            <div class="modal-body">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="Your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Your password">
+                    </div>
+                    <div class="form-options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </form>
+                <div class="social-login">
+                    <p>Or login with</p>
+                    <div class="social-buttons">
+                        <button class="btn btn-social btn-google"><i class="fab fa-google"></i> Google</button>
+                        <button class="btn btn-social btn-facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+                    </div>
+                </div>
+                <div class="signup-link">
+                    <p>Don't have an account? <a href="#">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signup-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Create Your Account</h2>
+            </div>
+            <div class="modal-body">
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" placeholder="Your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" placeholder="Create a password">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm">Confirm Password</label>
+                        <input type="password" id="signup-confirm" placeholder="Confirm your password">
+                    </div>
+                    <div class="form-options">
+                        <div class="terms">
+                            <input type="checkbox" id="terms">
+                            <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                </form>
+                <div class="social-login">
+                    <p>Or sign up with</p>
+                    <div class="social-buttons">
+                        <button class="btn btn-social btn-google"><i class="fab fa-google"></i> Google</button>
+                        <button class="btn btn-social btn-facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+                    </div>
+                </div>
+                <div class="login-link">
+                    <p>Already have an account? <a href="#">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

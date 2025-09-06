@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <style>
+    .plate { fill: #f5f5f5; stroke: #e0e0e0; stroke-width: 2; }
+    .steak { fill: #8d6e63; }
+    .steak-inside { fill: #a1887f; }
+    .grill-mark { fill: #5d4037; }
+    .herb { fill: #4caf50; }
+    .sauce { fill: #795548; opacity: 0.7; }
+  </style>
+  <circle cx="100" cy="100" r="80" class="plate" />
+  <path d="M50,80 C60,70 140,70 150,80 S140,120 100,120 S40,90 50,80 Z" class="steak" />
+  <path d="M60,85 C70,75 130,75 140,85 S130,110 100,110 S50,95 60,85 Z" class="steak-inside" />
+  <path d="M70,80 L120,90" stroke="#5d4037" stroke-width="3" stroke-linecap="round" />
+  <path d="M75,90 L125,100" stroke="#5d4037" stroke-width="3" stroke-linecap="round" />
+  <path d="M70,100 L120,110" stroke="#5d4037" stroke-width="3" stroke-linecap="round" />
+  <circle cx="80" cy="80" r="3" class="herb" />
+  <circle cx="130" cy="85" r="3" class="herb" />
+  <circle cx="110" cy="75" r="3" class="herb" />
+  <ellipse cx="100" cy="130" rx="40" ry="5" class="sauce" />
+</svg>

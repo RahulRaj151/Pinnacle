@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <style>
+    .plate { fill: #f5f5f5; stroke: #e0e0e0; stroke-width: 2; }
+    .pasta { fill: #f9d784; stroke: #e6b348; stroke-width: 1; }
+    .sauce { fill: #d14836; }
+    .herb { fill: #4caf50; }
+  </style>
+  <circle cx="100" cy="100" r="80" class="plate" />
+  <path d="M50,90 C60,70 140,70 150,90 S140,120 100,120 S40,110 50,90 Z" class="pasta" />
+  <path d="M60,85 C70,75 130,75 140,85 S130,105 100,105 S50,95 60,85 Z" class="sauce" />
+  <circle cx="80" cy="80" r="3" class="herb" />
+  <circle cx="120" cy="85" r="3" class="herb" />
+  <circle cx="100" cy="75" r="3" class="herb" />
+  <circle cx="90" cy="95" r="3" class="herb" />
+  <circle cx="110" cy="90" r="3" class="herb" />
+</svg>

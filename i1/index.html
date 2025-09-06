@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">My Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero" style="background-image: url('images/hero-bg.svg');">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span class="highlight">Rahul Raj</span></h1>
+                    <div class="typewriter">
+                        <span id="typewriter-text">Web Developer & Designer</span>
+                    </div>
+                    <p class="hero-description">I build modern, responsive websites with clean code and great user experiences.</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn primary">View My Work</a>
+                        <a href="#contact" class="btn secondary">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src=""C:\Users\Win11\OneDrive\Pictures\IMG_20250315_222123.jpg"" alt="Profile Picture">
+                </div>
+                <div class="about-text">
+                    <p>Welcome to my portfolio! I am a passionate web developer with a strong foundation in HTML, CSS, and JavaScript. I enjoy creating responsive and user-friendly websites that provide great user experiences.</p>
+                    <p>I am constantly learning and improving my skills to stay up-to-date with the latest web development trends and technologies.</p>
+                    <div class="personal-info">
+                        <div class="info-item">
+                            <span class="info-label">Name:</span>
+                            <span class="info-value">Rahul Raj</span>
+
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email:</span>
+                            <span class="info-value">rrjsr04@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Location:</span>
+                            <span class="info-value">Jamshedpur, India</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn primary">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Tech Stack</h2>
+            <p class="section-subtitle">I'm proficient in a range of modern technologies that empower me to build highly functional solutions. These are some of my main technologies.</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="images/html-icon.svg" alt="HTML5" width="60" height="60">
+                    </div>
+                    <h3>HTML5</h3>
+                    <p>Semantic markup for modern web applications.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="images/css-icon.svg" alt="CSS3" width="60" height="60">
+                    </div>
+                    <h3>CSS3</h3>
+                    <p>Styling and responsive design for all devices.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="images/js-icon.svg" alt="JavaScript" width="60" height="60">
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Dynamic functionality and interactive experiences.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="images/react-icon.svg" alt="React" width="60" height="60">
+                    </div>
+                    <h3>React</h3>
+                    <p>Building modern, component-based user interfaces.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="images/nodejs-icon.svg" alt="Node.js" width="60" height="60">
+                    </div>
+                    <h3>Node.js</h3>
+                    <p>Server-side JavaScript for backend development.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="images/mongodb-icon.svg" alt="MongoDB" width="60" height="60">
+                    </div>
+                    <h3>MongoDB</h3>
+                    <p>NoSQL database for flexible, JSON-like data.</p>
+                </div>
+            </div>
+            
+            <div class="skills-cta">
+                <a href="#" class="btn secondary">View All Skills</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-subtitle">Here are some of my recent projects. Each one was built to solve a specific problem and showcases different aspects of my technical skills.</p>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="images/project1.svg" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-featured online store with product catalog, shopping cart, user authentication, and payment processing.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn small">View Project</a>
+                            <a href="#" class="btn small secondary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="images/project2.svg" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Management App</h3>
+                        <p>A productivity application for managing tasks, projects, and deadlines with real-time updates and team collaboration features.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Material UI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn small">View Project</a>
+                            <a href="#" class="btn small secondary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="images/project3.svg" alt="Project 3">
+                    </div>
+                    <div class="project-info">
+                        <h3>Weather Dashboard</h3>
+                        <p>An interactive weather application that provides current conditions and forecasts for any location, with data visualization and location tracking.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Weather API</span>
+                            <span class="tag">Chart.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn small">View Project</a>
+                            <a href="#" class="btn small secondary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <img src="images/email-icon.svg" alt="Email" class="contact-icon">
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>your.email@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="images/phone-icon.svg" alt="Phone" class="contact-icon">
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+1 234 567 890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="images/location-icon.svg" alt="Location" class="contact-icon">
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Your City, Country</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><img src="images/github-icon.svg" alt="GitHub" class="social-icon"></a>
+                        <a href="#" class="social-link"><img src="images/linkedin-icon.svg" alt="LinkedIn" class="social-icon"></a>
+                        <a href="#" class="social-link"><img src="images/twitter-icon.svg" alt="Twitter" class="social-icon"></a>
+                        <a href="#" class="social-link"><img src="images/instagram-icon.svg" alt="Instagram" class="social-icon"></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Your Name</h3>
+                    <p>Web Developer & Designer</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-nav">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-social">
+                        <h4>Connect</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><img src="images/github-icon.svg" alt="GitHub" class="social-icon-img"></a>
+                            <a href="#" class="social-icon"><img src="images/linkedin-icon.svg" alt="LinkedIn" class="social-icon-img"></a>
+                            <a href="#" class="social-icon"><img src="images/twitter-icon.svg" alt="Twitter" class="social-icon-img"></a>
+                            <a href="#" class="social-icon"><img src="images/instagram-icon.svg" alt="Instagram" class="social-icon-img"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Your Name. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

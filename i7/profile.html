@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | EventHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">EventHub</a>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="user-info">
+                    <span class="user-name">John Doe</span>
+                    <img src="https://via.placeholder.com/40" alt="User" class="user-avatar">
+                </div>
+                <div class="user-dropdown">
+                    <ul>
+                        <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                        <li><a href="create-event.html"><i class="fas fa-plus-circle"></i> Create Event</a></li>
+                        <li><a href="my-events.html"><i class="fas fa-calendar-check"></i> My Events</a></li>
+                        <li><a href="profile.html" class="active"><i class="fas fa-user-circle"></i> Profile</a></li>
+                        <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="page-header">
+                <h1>Profile Settings</h1>
+                <p>Manage your account settings and preferences</p>
+            </div>
+
+            <div class="profile-content">
+                <div class="profile-sidebar">
+                    <div class="profile-nav">
+                        <ul>
+                            <li><a href="#account" class="active" data-tab="account"><i class="fas fa-user"></i> Account</a></li>
+                            <li><a href="#security" data-tab="security"><i class="fas fa-lock"></i> Security</a></li>
+                            <li><a href="#notifications" data-tab="notifications"><i class="fas fa-bell"></i> Notifications</a></li>
+                            <li><a href="#billing" data-tab="billing"><i class="fas fa-credit-card"></i> Billing</a></li>
+                            <li><a href="#integrations" data-tab="integrations"><i class="fas fa-plug"></i> Integrations</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="profile-main">
+                    <!-- Account Tab -->
+                    <div class="profile-tab active" id="account">
+                        <h2>Account Information</h2>
+                        <form id="account-form" class="profile-form">
+                            <div class="profile-avatar">
+                                <img src="https://via.placeholder.com/150" alt="Profile Picture" id="profile-picture">
+                                <div class="avatar-upload">
+                                    <label for="avatar-input" class="btn btn-small">Change Photo</label>
+                                    <input type="file" id="avatar-input" accept="image/*" style="display: none;">
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="first-name">First Name</label>
+                                        <input type="text" id="first-name" value="John" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="last-name">Last Name</label>
+                                        <input type="text" id="last-name" value="Doe" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" value="john.doe@example.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" value="(555) 123-4567">
+                                </div>
+                                <div class="form-group">
+                                    <label for="bio">Bio</label>
+                                    <textarea id="bio" rows="4">Event organizer with 5+ years of experience in corporate and community events.</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="website">Website</label>
+                                    <input type="url" id="website" value="https://johndoe.com">
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Social Media</h3>
+                                <div class="form-group">
+                                    <label for="twitter"><i class="fab fa-twitter"></i> Twitter</label>
+                                    <input type="text" id="twitter" value="@johndoe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="facebook"><i class="fab fa-facebook-f"></i> Facebook</label>
+                                    <input type="text" id="facebook" value="facebook.com/johndoe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="instagram"><i class="fab fa-instagram"></i> Instagram</label>
+                                    <input type="text" id="instagram" value="@johndoe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</label>
+                                    <input type="text" id="linkedin" value="linkedin.com/in/johndoe">
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Security Tab -->
+                    <div class="profile-tab" id="security">
+                        <h2>Security Settings</h2>
+                        <form id="security-form" class="profile-form">
+                            <div class="form-section">
+                                <h3>Change Password</h3>
+                                <div class="form-group">
+                                    <label for="current-password">Current Password</label>
+                                    <input type="password" id="current-password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-password">New Password</label>
+                                    <input type="password" id="new-password">
+                                    <div class="password-strength">
+                                        <div class="strength-meter">
+                                            <div class="strength-bar" style="width: 0%;"></div>
+                                        </div>
+                                        <span class="strength-text">Password strength: <span id="strength-value">None</span></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-password">Confirm New Password</label>
+                                    <input type="password" id="confirm-password">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Update Password</button>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Two-Factor Authentication</h3>
+                                <div class="form-group">
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" id="two-factor" class="toggle-input">
+                                        <label for="two-factor" class="toggle-label"></label>
+                                    </div>
+                                    <div class="toggle-description">
+                                        <h4>Enable Two-Factor Authentication</h4>
+                                        <p>Add an extra layer of security to your account by requiring a verification code in addition to your password.</p>
+                                    </div>
+                                </div>
+                                <div class="two-factor-setup" style="display: none;">
+                                    <p>Scan the QR code with your authenticator app:</p>
+                                    <div class="qr-code">
+                                        <img src="https://via.placeholder.com/200" alt="QR Code">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="verification-code">Verification Code</label>
+                                        <input type="text" id="verification-code" placeholder="Enter 6-digit code">
+                                    </div>
+                                    <button type="button" class="btn btn-primary">Verify</button>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Login Sessions</h3>
+                                <div class="session-list">
+                                    <div class="session-item">
+                                        <div class="session-info">
+                                            <i class="fas fa-laptop"></i>
+                                            <div>
+                                                <h4>MacBook Pro - Chrome</h4>
+                                                <p>New York, USA • Current Session</p>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-small btn-outline">This Device</button>
+                                    </div>
+                                    <div class="session-item">
+                                        <div class="session-info">
+                                            <i class="fas fa-mobile-alt"></i>
+                                            <div>
+                                                <h4>iPhone 13 - Safari</h4>
+                                                <p>New York, USA • Last active: 2 hours ago</p>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-small btn-outline btn-danger">Logout</button>
+                                    </div>
+                                </div>
+                                <button class="btn btn-danger">Logout of All Devices</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Notifications Tab -->
+                    <div class="profile-tab" id="notifications">
+                        <h2>Notification Preferences</h2>
+                        <form id="notifications-form" class="profile-form">
+                            <div class="form-section">
+                                <h3>Email Notifications</h3>
+                                <div class="notification-option">
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" id="email-events" class="toggle-input" checked>
+                                        <label for="email-events" class="toggle-label"></label>
+                                    </div>
+                                    <div class="toggle-description">
+                                        <h4>Event Updates</h4>
+                                        <p>Receive notifications about changes to events you're attending or organizing.</p>
+                                    </div>
+                                </div>
+                                <div class="notification-option">
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" id="email-reminders" class="toggle-input" checked>
+                                        <label for="email-reminders" class="toggle-label"></label>
+                                    </div>
+                                    <div class="toggle-description">
+                                        <h4>Event Reminders</h4>
+                                        <p>Receive reminders about upcoming events you're attending.</p>
+                                    </div>
+                                </div>
+                                <div class="notification-option">
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" id="email-marketing" class="toggle-input">
+                                        <label for="email-marketing" class="toggle-label"></label>
+                                    </div>
+                                    <div class="toggle-description">
+                                        <h4>Marketing & Promotions</h4>
+                                        <p>Receive updates about new features, promotions, and special offers.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Push Notifications</h3>
+                                <div class="notification-option">
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" id="push-events" class="toggle-input" checked>
+                                        <label for="push-events" class="toggle-label"></label>
+                                    </div>
+                                    <div class="toggle-description">
+                                        <h4>Event Updates</h4>
+                                        <p>Receive push notifications about changes to events you're attending or organizing.</p>
+                                    </div>
+                                </div>
+                                <div class="notification-option">
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" id="push-reminders" class="toggle-input" checked>
+                                        <label for="push-reminders" class="toggle-label"></label>
+                                    </div>
+                                    <div class="toggle-description">
+                                        <h4>Event Reminders</h4>
+                                        <p>Receive push reminders about upcoming events you're attending.</p>
+                                    </div>
+                                </div>
+                                <div class="notification-option">
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" id="push-messages" class="toggle-input" checked>
+                                        <label for="push-messages" class="toggle-label"></label>
+                                    </div>
+                                    <div class="toggle-description">
+                                        <h4>Messages</h4>
+                                        <p>Receive push notifications when you receive new messages.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save Preferences</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Billing Tab -->
+                    <div class="profile-tab" id="billing">
+                        <h2>Billing & Subscription</h2>
+                        <div class="form-section">
+                            <div class="current-plan">
+                                <div class="plan-info">
+                                    <h3>Current Plan: <span class="plan-name">Professional</span></h3>
+                                    <p>Your plan renews on <strong>June 15, 2023</strong></p>
+                                    <div class="plan-features">
+                                        <ul>
+                                            <li><i class="fas fa-check"></i> Unlimited events</li>
+                                            <li><i class="fas fa-check"></i> Custom branding</li>
+                                            <li><i class="fas fa-check"></i> Advanced analytics</li>
+                                            <li><i class="fas fa-check"></i> Priority support</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="plan-actions">
+                                    <button class="btn btn-outline">Change Plan</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Payment Method</h3>
+                            <div class="payment-methods">
+                                <div class="payment-method">
+                                    <div class="payment-info">
+                                        <i class="fab fa-cc-visa"></i>
+                                        <div>
+                                            <h4>Visa ending in 4242</h4>
+                                            <p>Expires 12/2025</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-actions">
+                                        <span class="badge">Default</span>
+                                        <button class="btn btn-small btn-outline">Edit</button>
+                                    </div>
+                                </div>
+                                <button class="btn btn-small">+ Add Payment Method</button>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Billing History</h3>
+                            <div class="billing-history">
+                                <table class="billing-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Description</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+                                            <th>Invoice</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>May 15, 2023</td>
+                                            <td>Professional Plan - Monthly</td>
+                                            <td>$29.99</td>
+                                            <td><span class="status-badge success">Paid</span></td>
+                                            <td><a href="#" class="invoice-link"><i class="fas fa-download"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Apr 15, 2023</td>
+                                            <td>Professional Plan - Monthly</td>
+                                            <td>$29.99</td>
+                                            <td><span class="status-badge success">Paid</span></td>
+                                            <td><a href="#" class="invoice-link"><i class="fas fa-download"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mar 15, 2023</td>
+                                            <td>Professional Plan - Monthly</td>
+                                            <td>$29.99</td>
+                                            <td><span class="status-badge success">Paid</span></td>
+                                            <td><a href="#" class="invoice-link"><i class="fas fa-download"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Integrations Tab -->
+                    <div class="profile-tab" id="integrations">
+                        <h2>Connected Services</h2>
+                        <div class="form-section">
+                            <div class="integration-list">
+                                <div class="integration-item">
+                                    <div class="integration-info">
+                                        <img src="https://via.placeholder.com/40" alt="Google Calendar">
+                                        <div>
+                                            <h4>Google Calendar</h4>
+                                            <p>Sync your events with Google Calendar</p>
+                                        </div>
+                                    </div>
+                                    <div class="integration-actions">
+                                        <div class="toggle-switch">
+                                            <input type="checkbox" id="google-calendar" class="toggle-input" checked>
+                                            <label for="google-calendar" class="toggle-label"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="integration-item">
+                                    <div class="integration-info">
+                                        <img src="https://via.placeholder.com/40" alt="Zoom">
+                                        <div>
+                                            <h4>Zoom</h4>
+                                            <p>Create Zoom meetings for virtual events</p>
+                                        </div>
+                                    </div>
+                                    <div class="integration-actions">
+                                        <div class="toggle-switch">
+                                            <input type="checkbox" id="zoom" class="toggle-input" checked>
+                                            <label for="zoom" class="toggle-label"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="integration-item">
+                                    <div class="integration-info">
+                                        <img src="https://via.placeholder.com/40" alt="Mailchimp">
+                                        <div>
+                                            <h4>Mailchimp</h4>
+                                            <p>Sync attendees with your Mailchimp lists</p>
+                                        </div>
+                                    </div>
+                                    <div class="integration-actions">
+                                        <button class="btn btn-small">Connect</button>
+                                    </div>
+                                </div>
+                                <div class="integration-item">
+                                    <div class="integration-info">
+                                        <img src="https://via.placeholder.com/40" alt="Stripe">
+                                        <div>
+                                            <h4>Stripe</h4>
+                                            <p>Process payments for your events</p>
+                                        </div>
+                                    </div>
+                                    <div class="integration-actions">
+                                        <div class="toggle-switch">
+                                            <input type="checkbox" id="stripe" class="toggle-input" checked>
+                                            <label for="stripe" class="toggle-label"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="integration-item">
+                                    <div class="integration-info">
+                                        <img src="https://via.placeholder.com/40" alt="Slack">
+                                        <div>
+                                            <h4>Slack</h4>
+                                            <p>Receive notifications in your Slack workspace</p>
+                                        </div>
+                                    </div>
+                                    <div class="integration-actions">
+                                        <button class="btn btn-small">Connect</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>EventHub</h2>
+                    <p>Your all-in-one event management platform</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Guides</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">GDPR</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 EventHub. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

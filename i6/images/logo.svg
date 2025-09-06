@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <style>
+    .text { font-family: 'Arial', sans-serif; font-weight: bold; }
+    .pinnacle { fill: #d32f2f; font-size: 28px; }
+    .tagline { fill: #757575; font-size: 12px; }
+    .fork { fill: none; stroke: #d32f2f; stroke-width: 3; stroke-linecap: round; }
+    .knife { fill: none; stroke: #757575; stroke-width: 3; stroke-linecap: round; }
+    .plate { fill: none; stroke: #d32f2f; stroke-width: 2; stroke-dasharray: 5,3; }
+  </style>
+  <circle cx="50" cy="50" r="30" class="plate" />
+  <path d="M40,40 L40,70" class="fork" />
+  <path d="M40,40 L30,30" class="fork" />
+  <path d="M40,40 L40,30" class="fork" />
+  <path d="M40,40 L50,30" class="fork" />
+  <path d="M60,40 L60,70" class="knife" />
+  <path d="M60,40 C60,35 65,30 70,40" class="knife" />
+  <text x="90" y="55" class="text pinnacle">PINNACLE</text>
+  <text x="90" y="70" class="text tagline">FINE DINING EXPERIENCE</text>
+</svg>

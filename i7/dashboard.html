@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | EventHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">EventHub</a>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="user-info">
+                    <span class="user-name">John Doe</span>
+                    <img src="https://via.placeholder.com/40" alt="User" class="user-avatar">
+                </div>
+                <div class="user-dropdown">
+                    <ul>
+                        <li><a href="dashboard.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                        <li><a href="create-event.html"><i class="fas fa-plus-circle"></i> Create Event</a></li>
+                        <li><a href="my-events.html"><i class="fas fa-calendar-check"></i> My Events</a></li>
+                        <li><a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
+                        <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Dashboard -->
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>Dashboard</h1>
+                <a href="create-event.html" class="btn btn-primary"><i class="fas fa-plus"></i> Create New Event</a>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>5</h3>
+                        <p>Total Events</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>128</h3>
+                        <p>Total Attendees</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>87</h3>
+                        <p>Tickets Sold</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>$2,450</h3>
+                        <p>Revenue</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-content">
+                <div class="dashboard-card upcoming-events">
+                    <div class="card-header">
+                        <h2>Upcoming Events</h2>
+                        <a href="my-events.html" class="view-all">View All</a>
+                    </div>
+                    <div class="card-content">
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">15</span>
+                                <span class="month">Jun</span>
+                            </div>
+                            <div class="event-details">
+                                <h3>Tech Conference 2023</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Convention Center, New York</p>
+                                <p><i class="fas fa-clock"></i> 9:00 AM - 5:00 PM</p>
+                            </div>
+                            <div class="event-actions">
+                                <a href="edit-event.html" class="btn-small"><i class="fas fa-edit"></i></a>
+                                <a href="event-details.html" class="btn-small"><i class="fas fa-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">22</span>
+                                <span class="month">Jun</span>
+                            </div>
+                            <div class="event-details">
+                                <h3>Marketing Workshop</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Business Center, Chicago</p>
+                                <p><i class="fas fa-clock"></i> 1:00 PM - 4:00 PM</p>
+                            </div>
+                            <div class="event-actions">
+                                <a href="edit-event.html" class="btn-small"><i class="fas fa-edit"></i></a>
+                                <a href="event-details.html" class="btn-small"><i class="fas fa-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">30</span>
+                                <span class="month">Jun</span>
+                            </div>
+                            <div class="event-details">
+                                <h3>Networking Mixer</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Skyline Lounge, San Francisco</p>
+                                <p><i class="fas fa-clock"></i> 6:00 PM - 9:00 PM</p>
+                            </div>
+                            <div class="event-actions">
+                                <a href="edit-event.html" class="btn-small"><i class="fas fa-edit"></i></a>
+                                <a href="event-details.html" class="btn-small"><i class="fas fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card recent-activity">
+                    <div class="card-header">
+                        <h2>Recent Activity</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-ticket-alt"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p>New ticket purchase for <strong>Tech Conference 2023</strong></p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p>New registration for <strong>Marketing Workshop</strong></p>
+                                <span class="activity-time">5 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-comment"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p>New comment on <strong>Networking Mixer</strong></p>
+                                <span class="activity-time">Yesterday</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p>Your event <strong>Tech Conference 2023</strong> was shared</p>
+                                <span class="activity-time">2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p>New 5-star review for <strong>Marketing Workshop</strong></p>
+                                <span class="activity-time">3 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-row">
+                <div class="dashboard-card analytics-card">
+                    <div class="card-header">
+                        <h2>Ticket Sales</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="chart-container">
+                            <canvas id="sales-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card tasks-card">
+                    <div class="card-header">
+                        <h2>Tasks</h2>
+                        <button class="btn-small" id="add-task-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <div class="task-list">
+                            <div class="task-item">
+                                <input type="checkbox" id="task1" class="task-checkbox">
+                                <label for="task1">Finalize speakers for Tech Conference</label>
+                                <span class="task-due">Due: Jun 10</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" id="task2" class="task-checkbox">
+                                <label for="task2">Order catering for Marketing Workshop</label>
+                                <span class="task-due">Due: Jun 15</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" id="task3" class="task-checkbox" checked>
+                                <label for="task3">Send invitations for Networking Mixer</label>
+                                <span class="task-due">Completed</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" id="task4" class="task-checkbox">
+                                <label for="task4">Book venue for Product Launch</label>
+                                <span class="task-due">Due: Jun 5</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" id="task5" class="task-checkbox">
+                                <label for="task5">Prepare presentation slides</label>
+                                <span class="task-due">Due: Jun 12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>EventHub</h2>
+                    <p>Your all-in-one event management platform</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Guides</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">GDPR</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 EventHub. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add Task Modal -->
+    <div id="add-task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Add New Task</h2>
+            <form id="task-form">
+                <div class="form-group">
+                    <label for="task-name">Task Name</label>
+                    <input type="text" id="task-name" placeholder="Enter task name" required>
+                </div>
+                <div class="form-group">
+                    <label for="task-due">Due Date</label>
+                    <input type="date" id="task-due" required>
+                </div>
+                <div class="form-group">
+                    <label for="task-event">Related Event</label>
+                    <select id="task-event">
+                        <option value="">Select an event</option>
+                        <option value="1">Tech Conference 2023</option>
+                        <option value="2">Marketing Workshop</option>
+                        <option value="3">Networking Mixer</option>
+                        <option value="4">Product Launch</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="task-priority">Priority</label>
+                    <select id="task-priority">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Task</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

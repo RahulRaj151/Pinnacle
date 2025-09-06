@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <style>
+    .background { fill: #1a1a1a; }
+    .overlay { fill: rgba(0,0,0,0.5); }
+    .table { fill: #5d4037; }
+    .plate { fill: #f5f5f5; stroke: #e0e0e0; stroke-width: 2; }
+    .wine-glass { fill: none; stroke: #f5f5f5; stroke-width: 2; }
+    .wine { fill: #880e4f; opacity: 0.8; }
+    .candle { fill: #ffecb3; }
+    .flame { fill: #ff9800; }
+    .utensil { fill: none; stroke: #e0e0e0; stroke-width: 1; }
+    .food { fill: #8d6e63; }
+    .garnish { fill: #4caf50; }
+  </style>
+  <rect width="1200" height="600" class="background" />
+  <rect width="1200" height="600" class="overlay" />
+  
+  <!-- Table 1 -->
+  <rect x="100" y="300" width="300" height="200" rx="10" class="table" />
+  <circle cx="150" cy="350" r="30" class="plate" />
+  <circle cx="250" cy="350" r="30" class="plate" />
+  <path d="M180,330 C180,300 190,300 190,330 L195,370 C195,375 175,375 175,370 Z" class="wine-glass" />
+  <path d="M180,350 L190,350 L190,370 L180,370 Z" class="wine" />
+  <path d="M280,330 C280,300 290,300 290,330 L295,370 C295,375 275,375 275,370 Z" class="wine-glass" />
+  <path d="M280,350 L290,350 L290,370 L280,370 Z" class="wine" />
+  <rect x="200" y="320" width="10" height="30" class="candle" />
+  <ellipse cx="205" cy="320" rx="5" ry="10" class="flame" />
+  
+  <!-- Table 2 -->
+  <rect x="500" y="200" width="300" height="200" rx="10" class="table" />
+  <circle cx="550" cy="250" r="30" class="plate" />
+  <circle cx="650" cy="250" r="30" class="plate" />
+  <path d="M580,230 C580,200 590,200 590,230 L595,270 C595,275 575,275 575,270 Z" class="wine-glass" />
+  <path d="M580,250 L590,250 L590,270 L580,270 Z" class="wine" />
+  <path d="M680,230 C680,200 690,200 690,230 L695,270 C695,275 675,275 675,270 Z" class="wine-glass" />
+  <path d="M680,250 L690,250 L690,270 L680,270 Z" class="wine" />
+  <rect x="600" y="220" width="10" height="30" class="candle" />
+  <ellipse cx="605" cy="220" rx="5" ry="10" class="flame" />
+  
+  <!-- Table 3 -->
+  <rect x="800" y="300" width="300" height="200" rx="10" class="table" />
+  <circle cx="850" cy="350" r="30" class="plate" />
+  <circle cx="950" cy="350" r="30" class="plate" />
+  <path d="M880,330 C880,300 890,300 890,330 L895,370 C895,375 875,375 875,370 Z" class="wine-glass" />
+  <path d="M880,350 L890,350 L890,370 L880,370 Z" class="wine" />
+  <path d="M980,330 C980,300 990,300 990,330 L995,370 C995,375 975,375 975,370 Z" class="wine-glass" />
+  <path d="M980,350 L990,350 L990,370 L980,370 Z" class="wine" />
+  <rect x="900" y="320" width="10" height="30" class="candle" />
+  <ellipse cx="905" cy="320" rx="5" ry="10" class="flame" />
+  
+  <!-- Decorative elements -->
+  <circle cx="200" cy="100" r="30" class="flame" opacity="0.1" />
+  <circle cx="600" cy="150" r="50" class="flame" opacity="0.1" />
+  <circle cx="1000" cy="100" r="40" class="flame" opacity="0.1" />
+  <circle cx="400" cy="500" r="60" class="flame" opacity="0.1" />
+  <circle cx="800" cy="550" r="45" class="flame" opacity="0.1" />
+</svg>
